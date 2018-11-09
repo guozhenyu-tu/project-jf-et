@@ -35,7 +35,7 @@ function devEjs() {
 
                 addHtml += "<meta name='format-detection' content='telephone=no, email=no' />\n";
 
-                addHtml += "<link rel='stylesheet'  href='../css/et_store.css'/>\n";//第二版开发样式
+                addHtml += "<link rel='stylesheet'  href='../../css/et_store.css'/>\n";//第二版开发样式
 
                 $('head').append(addHtml);
 

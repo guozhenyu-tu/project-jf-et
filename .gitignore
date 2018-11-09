@@ -59,5 +59,9 @@ typings/
 
 # next.js build output
 .next
-.dist
+.env
+# jf
 .idea
+build
+dis
+config.js
