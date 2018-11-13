@@ -29,8 +29,10 @@
     .introduce_one_top{
       font-size: 16px;
       display: inline-block;
-
-
+      width: calc(~" 100% - 36px ");
+      @media screen and (max-width: 350px){
+        font-size: 14px;
+      }
     }
   }
   ul{
@@ -38,8 +40,10 @@
     font-size: 14px;
     padding: 6px  30px;
     color: #4a4a4a;
-    li{
+    .emp_line{
       padding: 4px;
     }
+
   }
+
 }
