@@ -63,5 +63,8 @@ typings/
 # jf
 .idea
 build
-dis
+dist
 config.js
+.idea/workspace.xml
+*.xml
+.idea/workspace.xml
