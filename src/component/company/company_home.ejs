@@ -17,11 +17,13 @@
 <!--机构介绍-->
 <div class="company_all" style="display: block;">
     <div class="img_bg">
-        <img src="../../images/show.png">
+        <img class="inf_img" src="../../images/show.png">
 
         <div class="inf_box">
             <p class="title_text">"海天国际"简介</p>
-            <p class="text_in">北京海天伟业文化发展有限公司（简称“海天国际”）创建于1998年，是国内第一批教育培训商业机构，作为一家先行的管理培训专业公司，至今已拥有20年坚实的行业实践历程。秉承“智慧引领成功、学习成就未来”的核心理念，经过二十年的稳步发展，“海天”已经成为中国管理培训业唯一一家集远程教育标准体系...</p>
+            <!--公共样式text_in,展开text_in_l,收缩text_in_f-->
+            <p class="text_in text_in_f">北京海天伟业文化发展有限公司（简称“海天国际”）创建于1998年，是国内第一批教育培训商业机构，作为一家先行的管理培训专业公司，至今已拥有20年坚实的行业实践历程。秉承“智慧引领成功、学习成就未来”的核心理念，经过二十年的稳步发展，“海天”已经成为中国管理培训业唯一一家集远程教育标准体系...北京海天伟业文化发展有限公司（简称“海天国际”）创建于1998年，是国内第一批教育培训商业机构，作为一家先行的管理培训专业公司，至今已拥有20年坚实的行业实践历程。秉承“智慧引领成功、学习成就未来”的核心理念，经过二十年的稳步发展，</p>
+            <span class="text_more_button" onclick="toggle()">点击展开</span>
         </div>
     </div>
     <!--简介-->
@@ -339,5 +341,21 @@
                 document.getElementsByClassName(min_box_class)[1].style.display = 'block';
             }
         })
+    }
+
+
+    function toggle() {
+        var toggleTag = document.getElementsByClassName('text_in')[0];
+        if(event.currentTarget.innerText == '点击展开'){
+            event.currentTarget.classList.add('text_more_f');
+            event.currentTarget.innerText = '收缩';
+            toggleTag.classList.remove('text_in_f');
+            toggleTag.classList.add('text_in_l');
+        }else if(event.currentTarget.innerText == '收缩'){
+            event.currentTarget.classList.remove('text_more_f');
+            event.currentTarget.innerText = '点击展开';
+            toggleTag.classList.add('text_in_f');
+            toggleTag.classList.remove('text_in_l');
+        }
     }
 </script>
