@@ -39,24 +39,26 @@
 
   .img_bg {
     width: 100%;
-    position: relative;
-    margin-bottom: 3vh;
-    img {
+    padding-top: 65px;
+    .inf_img {
       width: 100%;
       height: calc(~"100vw / 750 * 350");
+      position: absolute;
+      top:0;
+      left: 0;
     }
     .inf_box {
-      position: absolute;
-      left: 5%;
-      top: 40%;
+      position: relative;
       width: 90%;
       margin: 0 auto;
       background: #ffffff;
       padding: 15px;
       box-sizing: border-box;
       border-radius: 8px;
+      text-align: center;
       .title_text {
         color: #4a4a4a;
+        text-align: left;
         font-size: 16px;
       }
       .text_in {
@@ -64,30 +66,61 @@
         line-height: 20px;
         font-size: 14px;
         color: #4a4a4a;
+        text-align: left;
+      }
+      /*展开*/
+      .text_in_l{
+        display: block;
+        min-height: 120px;
+      }
+      /*收缩*/
+      .text_in_f{
         height: 120px;
+        //height: 120px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box; //作为弹性伸缩盒子模型显示。
         -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
         -webkit-line-clamp: 6; //显示的行
-
+      }
+      .text_more_button{
+        background: #ffffff;
+        font-size: 14px;
+        color: #4e8df4;
+        text-align: center;
+        display: inline-block;
+        margin-top: 4px;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 43%;
+          width: 6px;
+          height: 6px;
+          border-left: 1px solid #4e8df4;
+          border-bottom: 1px solid #4e8df4;
+          transform: rotate(-45deg);
+        }
+      }
+      .text_more_f:after{
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 40%;
+        width: 6px;
+        height: 6px;
+        border-left: 1px solid #4e8df4;
+        border-bottom: 1px solid #4e8df4;
+        transform: rotate(135deg);
+      }
+      .text_more{
+        display: block;
       }
     }
   }
   .company_bb {
-    //background: darkred;
-    padding-top: 10%;
     width: 100%;
-    @media screen and (max-width: 375px) {
-      padding-top: 14.5%;
-    }
-    @media screen and (max-width: 350px) {
-      padding-top: 18%;
-    }
-    @media screen and (max-width: 320px) {
-      padding-top: 23.2%;
-    }
-
     ul {
       .insde_tit1, .insde_tit2, .insde_tit3 {
         display: block;
